@@ -59,6 +59,7 @@ func main() {
 	}
 
 	detectionItem()
+	slice()
 
 }
 
@@ -77,4 +78,10 @@ func detectionItem() {
 
 func sliceMapCombination() {
 
+}
+
+func slice() {
+	fruitSlice := [3]string{"Apple", "Orange", "Grape"}
+
+	fmt.Println(len(fruitSlice))
 }
