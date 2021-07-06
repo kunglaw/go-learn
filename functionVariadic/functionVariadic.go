@@ -7,6 +7,8 @@ func main() {
 	var msg = fmt.Sprintf("Rata-rata : %.2f ", avg)
 
 	fmt.Println(msg)
+
+	people("Aries", "Dimas", "Yudhistira")
 }
 
 // car numbers means can inserted into many integer
@@ -20,4 +22,15 @@ func calculate(numbers ...int) float64 {
 	var avg = float64(result) / float64(len(numbers))
 
 	return avg
+}
+
+func people(names ...string) {
+
+	result := ""
+
+	for _, name := range names {
+		result += "and " + name
+	}
+
+	fmt.Print(result)
 }
