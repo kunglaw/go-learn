@@ -41,7 +41,43 @@ func multiDimension() {
 	fmt.Println(numbers)
 }
 
+func madeSlice() [][]int {
+	dt := [][]int{}
+
+	for i := 1; i <= 5; i++ {
+		var nilSlice []int
+		for j := 1; j <= 5; j++ {
+			nilSlice = append(nilSlice, j)
+		}
+		dt = append(dt, nilSlice)
+	}
+
+	return dt
+}
+
+func madeSnakeBoard(x int, y int) [][]int {
+
+	var result [][]int
+
+	var counter int = 1
+
+	for i := 0; i < x; i++ {
+		var emptySlice []int
+		for j := 0; j < y; j++ {
+			emptySlice = append(emptySlice, counter)
+			counter = counter + 1
+		}
+
+		result = append(result, emptySlice)
+	}
+
+	return result
+}
+
 func main() {
 	// multiDimension()
-	createMultiDimension()
+	//createMultiDimension()
+	fmt.Println(madeSlice())
+	fmt.Println(madeSnakeBoard(5, 5))
+	fmt.Println(madeSnakeBoard(10, 10))
 }
