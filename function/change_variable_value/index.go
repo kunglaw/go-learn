@@ -13,6 +13,6 @@ func main() {
 
 }
 
-func change(val int) {
-	score = val
+func change(*val , int) {
+	&score := *val
 }
